@@ -63,6 +63,7 @@ end
 require 'pagy/extras/pagy'
 require 'pagy/extras/limit'
 require 'pagy/extras/overflow'
+require 'pagy/extras/headers'
 Pagy::DEFAULT[:limit]    = 10
 Pagy::DEFAULT[:overflow] = :empty_page
 Pagy::DEFAULT.freeze
@@ -88,6 +89,9 @@ end # :nodoc:
 
 class Comment < ActiveRecord::Base # :nodoc:
   belongs_to :post
+end # :nodoc:
+
+module Calendar # :nodoc:
 end # :nodoc:
 
 # DB seed
