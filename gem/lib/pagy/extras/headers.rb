@@ -25,7 +25,7 @@ class Pagy # :nodoc:
       pagy_link_header(pagy).tap do |hash|
         hash[headers[:page]]  = pagy.page.to_s if pagy.page && headers[:page]
         hash[headers[:limit]] = pagy.limit.to_s \
-            if headers[:limit] && !(defined?(Pagy::Calendar) && pagy.is_a?(Pagy::Calendar::Unit))
+            if headers[:limit] && !(defined?(Calendar) && pagy.is_a?(Pagy::Calendar::Unit))
         return hash if (defined?(Pagy::Countless) && pagy.is_a?(Pagy::Countless)) || \
                        (defined?(Pagy::Keyset) && pagy.is_a?(Pagy::Keyset))
 
