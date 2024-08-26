@@ -114,6 +114,7 @@ class CommentsController < ActionController::Base # :nodoc:
 
   def index
     @pagy, @comments = pagy(Comment.all)
+    pagy_headers_merge(@pagy)
     render inline: TEMPLATE
   end
 end
